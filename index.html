@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body class="bg-white-800 shadow-md">
+    <!-- Navbar -->
+    <header class="bg-blue-50 shadow-md">
+        <!-- Top bar -->
+        <div class="bg-blue-950 text-white flex flex-col md:flex-row justify-between items-center px-4 py-2">
+            <!-- Contact Info -->
+            <div class="flex items-center space-x-4 text-sm md:text-base">
+                <span class="flex items-center space-x-1">
+                    <img src="icons/comments.png" alt="Message Icon" class="h-6 w-6">
+                    <span>1800.568.3248</span>
+                </span>
+                <span class="flex items-center space-x-1">
+                    <img src="icons/email.png" alt="Email Icon" class="h-6 w-6">
+                    <span>dummy@dummy.com</span>
+                </span>
+            </div>
+
+            <!-- Schedule Button -->
+            <button
+                class="flex items-center space-x-2 bg-red-600 hover:bg-red-700 px-4 py-2 mt-2 md:mt-0 rounded text-white text-sm md:text-base">
+                <img src="icons/schedule.png" alt="Schedule Icon" class="h-6 w-6">
+                <span>Schedule An Appointment</span>
+            </button>
+        </div>
+
+        <!-- Main Navbar -->
+        <div class="flex flex-col md:flex-row items-center justify-between px-4 py-4">
+
+            <!-- Logo  -->
+            <div class="flex items-center space-x-3">
+                <img src="icons/logo.png" alt="Logo" class="h-12 w-13 rounded-full">
+                <div>
+                    <h1 class="text-black font-semibold">
+                        <span class="text-3xl text-blue-600 font-bold font-cursive">A</span><span
+                            class="text-2xl">irtech</span>
+                    </h1>
+                    <p class="text-sm text-gray-600">Heating & Air Conditioning</p>
+                </div>
+            </div>
+
+            <!-- Hamburger Menu -->
+            <div class="md:hidden mt-2">
+                <button id="menu-button" class="text-gray-700 focus:outline-none">
+                    <img src="icons/hamburger.png" alt="hamburger" class="h-6 w-6" fill="none" viewBox="0 0 24 24">
+                </button>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav id="menu"
+                class="hidden md:flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 mt-4 md:mt-0">
+                <a href="#" class="text-blue-600 font-semibold">Home</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">About Us</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Services</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Blog</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600">Contact Us</a>
+            </nav>
+
+            <!-- Search Icon -->
+            <button class="hidden md:block text-gray-700 hover:text-blue-600">
+                <img src="icons/search.png" alt="Search Icon" class="h-6 w-6">
+            </button>
+        </div>
+    </header>
+
+</body>
+
+</html>
