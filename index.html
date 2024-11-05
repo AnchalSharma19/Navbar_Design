@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar</title>
+    <title>Website</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-white-800 shadow-md">
-    <!-- Navbar -->
-    <header class="bg-blue-50 shadow-md">
-        <!-- Top bar -->
-        <div class="bg-blue-950 text-white flex flex-col md:flex-row justify-between items-center px-4 py-2">
+<body class="bg-white shadow-md">
+    <header class="bg-blue-25 shadow-md">
+        <div class="bg-gray-800 text-white flex flex-col md:flex-row justify-between items-center px-4 py-2">
+
             <!-- Contact Info -->
             <div class="flex items-center space-x-4 text-sm md:text-base">
                 <span class="flex items-center space-x-1">
@@ -28,7 +28,7 @@
 
             <!-- Schedule Button -->
             <button
-                class="flex items-center space-x-2 bg-red-600 hover:bg-red-700 px-4 py-2 mt-2 md:mt-0 rounded text-white text-sm md:text-base">
+                class="flex items-center space-x-2 bg-red-600 hover:bg-red-800 px-4 py-2 mt-2 md:mt-0 rounded text-white text-sm md:text-base">
                 <img src="icons/schedule.png" alt="Schedule Icon" class="h-6 w-6">
                 <span>Schedule An Appointment</span>
             </button>
@@ -37,42 +37,57 @@
         <!-- Main Navbar -->
         <div class="flex flex-col md:flex-row items-center justify-between px-4 py-4">
 
-            <!-- Logo  -->
-            <div class="flex items-center space-x-3">
-                <img src="icons/logo.png" alt="Logo" class="h-12 w-13 rounded-full">
-                <div>
-                    <h1 class="text-black font-semibold">
-                        <span class="text-3xl text-blue-600 font-bold font-cursive">A</span><span
-                            class="text-2xl">irtech</span>
+            <!-- Logo -->
+            <div class="flex items-center space-x-3 w-full md:w-auto">
+                <img src="icons/logo.png" alt="Logo" class="h-12 w-12 rounded-full">
+                <div class="text-left">
+                    <h1 class="text-black font-semibold md:text-left">
+                        <span class="text-3xl text-blue-600 font-bold font-cursive font-bold">A</span>
+                        <span class="text-2xl font-bold">irtech</span>
                     </h1>
-                    <p class="text-sm text-gray-600">Heating & Air Conditioning</p>
+                    <p class="text-sm text-gray-500 font-bold">Heating & Air Conditioning</p>
                 </div>
             </div>
 
             <!-- Hamburger Menu -->
-            <div class="md:hidden mt-2">
-                <button id="menu-button" class="text-gray-700 focus:outline-none">
-                    <img src="icons/hamburger.png" alt="hamburger" class="h-6 w-6" fill="none" viewBox="0 0 24 24">
+            <div class="md:hidden ml-auto">
+                <button id="menu-button" class="text-gray-700 focus:outline-none -mt-1">
+                    <img src="icons/hamburger.png" alt="hamburger" class="h-6 w-6">
                 </button>
             </div>
 
-            <!-- Navigation Links -->
-            <nav id="menu"
-                class="hidden md:flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 mt-4 md:mt-0">
-                <a href="#" class="text-blue-600 font-semibold">Home</a>
-                <a href="#" class="text-gray-700 hover:text-blue-600">About Us</a>
-                <a href="#" class="text-gray-700 hover:text-blue-600">Services</a>
-                <a href="#" class="text-gray-700 hover:text-blue-600">Blog</a>
-                <a href="#" class="text-gray-700 hover:text-blue-600">Contact Us</a>
+            <!-- Desktop Navigation Menu -->
+            <nav class="hidden md:flex md:space-x-4">
+                <a href="#" class="text-gray-700 hover:text-blue-600 text-lg ">Home</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 text-lg ">About Us</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 text-lg ">Services</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 text-lg ">Blog</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 text-lg ">Contact Us</a>
             </nav>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu"
+                class="hidden absolute top-0 right-0 h-screen w-64 bg-blue-700 text-white transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+                <nav class="flex flex-col space-y-6 p-8">
+                    <a href="#" class="text-white font-semibold hover:text-gray-200">Home</a>
+                    <a href="#" class="text-white font-semibold hover:text-gray-200">About Us</a>
+                    <a href="#" class="text-white font-semibold hover:text-gray-200">Services</a>
+                    <a href="#" class="text-white font-semibold hover:text-gray-200">Blog</a>
+                    <a href="#" class="text-white font-semibold hover:text-gray-200">Contact Us</a>
+                    <a href="#" class="text-white font-semibold hover:text-gray-200">Search</a>
+                </nav>
+            </div>
+
+
+            <!-- Backdrop for mobile menu -->
+            <div id="backdrop" class="fixed inset-0 bg-black bg-opacity-0 hidden"></div>
 
             <!-- Search Icon -->
             <button class="hidden md:block text-gray-700 hover:text-blue-600">
-                <img src="icons/search.png" alt="Search Icon" class="h-6 w-6">
+                <img src="icons/search.png" alt="Search Icon" class="h-7 w-7 m-5">
             </button>
         </div>
     </header>
-
 </body>
 
 </html>
